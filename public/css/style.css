@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    color: black;
+}
+
+#menuContanier{
+    position: absolute;
+    z-index: 2;
+}
+.fa-bars{
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    left:2rem;
+    top: 1rem;
+    z-index: 2;
+    cursor: pointer;
+}
+.menu-list{
+    list-style-type: none;
+    background-color: #ddd;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+   left:-100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .4s;
+}
+
+.menu-list a{
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    color: black;
+    margin: 2rem 20rem ;
+    transition: all .4s;
+}
+.menu-list a:hover{
+    color: orange;
+}
+
+.menu-bars{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+
+@media only screen and (min-width:991px){/*S*/
+    #menuContanier{
+        visibility: hidden;
+    }
+}
+/*MenuContanier, header'dan ve bigcontanierdan bagımsız position=absolute*/
+/**********************************************/
+
+/*******************Big Contanier*********************/
+#bigContanier{
+    width: 95%;
+    height: 800px;
+    margin: 0 auto;
+  
+}
+
+/*----------Header-------------------*/
+header{
+    width: 100%;
+    height: 10rem;
+}
+/*----------topheader-------------*/
+header #topheader{
+    width: 100%;
+    height:50%;
+    padding-left: 6rem;
+    
+}
+.logo{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Pacifico', cursive;
+
+}
+.logo a{
+    color: orange;
+    text-decoration: none;
+}
+
+#icons{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    float: right;
+    font-size: 2.5rem;
+    justify-content: space-around;
+}
+#icons a{
+    color: black;
+   line-height: 5rem;
+}
+#icons p{
+    visibility: hidden;
+}
+
+
+/*---------bottomheader-------------*/
+header #bottomheader{
+    width: 100%;
+    height: 40%;
+    margin-top: 1rem;
+}
+#search{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(243, 243, 243);
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+#bottomheader button{
+    visibility: hidden;
+}
+/*---------------pcmenuheader--------------------------------*/
+.pcmenuheader{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+}
+.pcmenuheader ul{
+    display: flex;
+    justify-content: space-around;
+}
+.pcmenuheader li{
+    list-style-type: none;
+    
+}
+.pcmenuheader a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: black;
+}
+.pcmenuheader a:hover{
+    color: orange;
+    transition: all .4s;
+}
+
+
+@media only screen and (min-width:991px){/*L*/
+    header{
+        padding-top: 1rem;
+        position: relative;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.396);
+    }
+
+    header #topheader{
+        display: inline-block;
+        width: 60%;
+        height: 60%;
+        vertical-align: top;
+        float: right;
+    }
+   
+    #icons a:hover{
+        color: orange;
+        }
+    header #bottomheader{
+        display: inline-block;
+        width: 25%;
+        height: 50%;
+        float: left;
+        box-shadow: 0 2px 4px 2px rgba(128, 128, 128, 0.208);
+        border-radius: 1rem;
+        
+    }
+    
+    header #search{
+        width: 85%;
+        background-color: white;
+        display: inline-block;
+        padding-left: .5rem;
+        font-size: 1.2rem;
+    }
+    #bottomheader button{
+        display: inline-block;
+        vertical-align: top;
+        width: 10%;
+        height: 100%;
+        background-color: rgba(221, 221, 221, 0);
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        visibility: visible;
+    }
+    #bottomheader button:hover{
+        color: orange;
+    }
+
+
+    .pcmenuheader{
+        visibility: visible;
+        position:absolute;
+        bottom: 0;
+    }
+}
+
+/*******************Section****************/
+/*--------------slider box--------------*/
+#sliderbox{
+    width: 100%;
+    height: 40rem;
+    background-color: bisque;
+    margin-top: 1rem;
+    position: relative;
+   
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: orange;
+}
+.swiper .swiper-pagination-bullet-active{
+    background-color: orange;
+}
+
+
+
+
+
+/*---------------campaignsbox---------------*/
+#campaignsbox{
+    width: 100%;
+    height: auto;
+    background-color: rgba(186, 186, 186, 0.088);
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+
+}
+.minicampaignsbox{
+    width:100%;
+    height:15rem;
+    margin: .5rem;
+    background-color: rgb(69, 0, 242);
+
+}
+.minicampaignsbox img{
+    width: 100%;
+    height: 100%;
+    
+}
+@media only screen and (min-width:991px){/*L*/
+    #sliderbox{
+        height: 50rem;
+    }
+
+    .minicampaignsbox{
+        height: 25rem;
+        width: 30%;
+        display: inline-block;
+        transform: scale(1);
+        /*sadece telefon ve bilgisiyar moduna uygun yaptım sonra düzelt buray height ve witdh değerlerini düzelt*/
+        transition: all .4s;
+        overflow: hidden;
+    }
+    .minicampaignsbox:hover{
+        box-shadow: 0 2px 4px 2px orange;
+        
+    }
+    .minicampaignsbox img{
+        transform: scale(1);
+        transition: all .4s;
+    }
+    .minicampaignsbox img:hover{    
+        transform: scale(1.1);
+    }
+  
+}
+@media only screen and (min-width:991px) and (max-width:1200){/*L*/
+    .minicampaignsbox{
+        width: 25%;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991px){/*M*/
+    .minicampaignsbox{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:768px){/*S*/
+    .minicampaignsbox{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*--------------brands*/
+#brands{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+.brand{
+    width: 15%;
+    height: 40%;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.brand img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;  
+    border-radius: 20%;
+}
+.brand img:hover{
+    transition: all .4s;
+}
+
+@media only screen and (min-width:1200px){/*XL*/
+    .brand{
+        width: 10%;
+        height: 45%;
+    }
+    .brand img{
+        opacity: 0.4;
+        object-fit:cover;  
+    }
+    .brand img:hover{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width:1200px) and (min-width:991px){/*L*/
+    .brand{
+        width: 11%;
+        height: 45%;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991px){/*M*/
+    .brand{
+        width: 12%;
+        height: 45%;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:768px){/*S*/
+    .brand{
+        width: 11%;
+        height: 45%;
+    }
+}
+@media only screen and (max-width:574px){/*XS*/
+
+}
+
+
+/*--------footer*/
+
+footer{
+
+   width: 100%;
+   background-color: #26262b;
+   font-family: 'Poppins', sans-serif;
+   margin-top: 3rem;
+}
+footer ul{
+    list-style-type: none;
+}
+
+#footer-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 1.5rem;
+}
+.footer-col h4{
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    background-color: red;
+    height: .2rem;
+    box-sizing: border-box;
+    width: 40%
+}
+.footer-col a{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #bbb;
+    display: block;
+    margin-bottom: 1rem;
+    transition: all .4s;
+}
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 1rem;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    background-color: rgb(255, 255, 255,0.2);
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 50%;
+    color: white;
+    transition: all .4s;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: white;
+}
+@media (max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+}

@@ -1,0 +1,148 @@
+<!-- Ortak Headar İmport -->
+<%- include("partials/_header")%>
+<body>
+    <div id="menuContanier">
+         <i class="fas fa-bars" onclick="chanceicon(this)"></i>
+            <div>
+                <ul class="menu-list">
+                    <li><a href="#">Erkek</a></li>
+                    <li><a href="#">Kadın</a></li>
+                    <li><a href="#">Anne&Çocuk</a></li>
+                    <li><a href="#">Kozmetik</a></li>
+                    <li><a href="#">Elektronik</a></li>
+                    
+
+                </ul>
+            </div>
+    </div>
+
+    <!--BigContanier-------------------------------------------------->
+
+   <div id="bigContanier">
+        <header>
+                <div id="topheader">
+                    <div class="logo"><a href="/"><h1>Dumlupınar</h1></a>
+                    </div>
+                    <div id="icons">
+                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                        
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>      
+                        
+                    </div> 
+                </div>
+            
+            <div id="bottomheader">
+                <!--Search bara basınca etrafı border oluyor onu kaldır-->
+                <input id="search" type="text" placeholder="Aradığınız ürün,katagori veya markayı yazınız.. " name="search">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="pcmenuheader">
+                <ul>
+                    <li><a href="#">Erkek</a></li>
+                    <li><a href="#">Kadın</a></li>
+                    <li><a href="#">Anne&Çocuk</a></li>
+                    <li><a href="#">Kozmetik</a></li>
+                    <li><a href="#">Elektronik</a></li>
+
+                </ul>
+            </div>    
+                
+            </header>
+            
+
+            <section id="sliderbox">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya4.jpg" alt=""></a></div>
+                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya1.jpg" alt=""></a></div>
+                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya3.jpg" alt=""></a></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </section>
+
+
+            <section id="campaignsbox">
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/minikampanya.jpg" alt=""></a></div>
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/minikampanya2.jpg" alt=""></a></div>
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/minikampanya.jpg" alt=""></a></div>
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya4.jpg" alt=""></a></div>
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya1.jpg" alt=""></a></div>
+                <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya3.jpg" alt=""></a></div>
+
+
+
+            </section>
+<!--brands-->
+
+            <section id="brands">
+                <div class="brand"><img src="/public/images/brands/underarmour.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/samsung.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/dell-icon-1.png" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/lacoste.png" alt=""></div>  
+                <div class="brand"><img src="/public/images/brands/monster.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/adidas.png" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/lacoste.png" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/monster.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/samsung.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/adidas.png" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/newbalance.jpg" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/lacoste.png" alt=""></div>
+                <div class="brand"><img src="/public/images/brands/dell-icon-1.png" alt=""></div>
+
+           
+                
+            </section>
+
+            
+            <!--  Ortak Footer İmport -->
+            <%-include("partials/_footer")%>
+
+  
+
+   </div>
+    
+
+    
+
+
+    <script src="/public/js/main.js"></script>
+    
+    <!--SLider için-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:6000,
+            disableOnInteraction:false,
+        },
+
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+    </script>
+
+</body>
+</html>
