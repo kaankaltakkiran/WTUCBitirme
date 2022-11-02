@@ -53,22 +53,39 @@
             </header>
             
 
-            <section id="sliderbox">
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya4.jpg" alt=""></a></div>
-                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya1.jpg" alt=""></a></div>
-                      <div class="minicampaignsbox"><a href="#"><img src="/public/images/kampanya3.jpg" alt=""></a></div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                  
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-            </section>
+           <!--sliderrrrrrrrrrrrr-->
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+
+      <img src="/public/images/kampanya1.jpg" style="width:100%"> 
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+
+      <img src="/public/images/kampanya2.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+
+      <img src="/public/images/kampanya3.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
 
 
             <section id="campaignsbox">
@@ -116,33 +133,8 @@
 
 
     <script src="/public/js/main.js"></script>
+    <script src="/public/js/slider.js"></script>
     
-    <!--SLider için-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    
-    <script>
-        const swiper = new Swiper('.swiper', {
-        autoplay:{
-            delay:6000,
-            disableOnInteraction:false,
-        },
-
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable:true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-});
-    </script>
 
 </body>
 </html>

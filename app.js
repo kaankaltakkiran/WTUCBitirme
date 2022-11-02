@@ -23,16 +23,15 @@ app.set('view engine','ejs');
 app.use('/public', express.static('public'));
 
 
-/* app.listen(port, () => {
-    console.log(`Server Şu Portta Çalışıyor: ${port}`);
- }); */
-
  //Route Bölümü
 //
 app.use("/",pageRoute);
 
+app.listen(port, () => {
+   console.log(`Server Şu Portta Çalışıyor: ${port}`);
+});
 
- app.listen(port,hostname, () => {
+ /*app.listen(port,hostname, () => {
     console.log(`server çalişiyor,http://${hostname}:${port}/`)
- })
+ })*/
   
