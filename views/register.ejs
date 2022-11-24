@@ -1,0 +1,57 @@
+ <!-- Ortak Headar İmport -->
+ <%- include("partials/_header")%>
+ <title>Üye Ol</title>
+ <!--css Codes-->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/login-register.css">
+ <body>
+
+<!-- Ortak Headar İmport -->
+<%- include("partials/_menu")%>
+
+    <!--  Home Page      -->
+    <section>
+        <div class="imgBox">
+            <img src="/images/login-register-arkaplan.jpg" alt="">
+        </div>
+        <div class="contentBox">
+            <div class="formBox">
+                <h2>Kayıt Ol</h2>
+                <form>
+                    <div class="inputBox">
+                        <span>Adınız</span><input type="text" required>
+                     </div>
+                     <div class="inputBox">
+                        <span>Soyadınız</span><input type="text" required>
+                     </div>
+                    <div class="inputBox">
+                       <span>Mail Adresiniz</span><input type="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Şifreniz</span><input type="password" required>
+                     </div>
+                     <div class="inputBox">
+                        <span>Doğum Tarihiniz</span><input type="date" id="birthday" name="birthday">
+                     </div>
+                     <div class="agreement"><a href="#" ><label><input type="checkbox"></label>Kullanıcı Sözleşmesini Onaylıyorum</a></div>
+                     <div class="inputBox">
+                        <input type="submit"value="Kayıt Ol" >
+                     </div> 
+                     
+                     <div class="inputBox">
+                        <p>Zaten Bir Hesabım Var <a href="/login">Hemen Giriş Yap</a></p>
+                     </div>    
+                </form>
+            </div>
+        </div>
+       
+    </section>
+    
+    <!--  Home Page Finish     -->
+    
+      <!--  Ortak Footer İmport -->
+  <%-include("partials/_footer")%>
+  
+  <script src="/js/active.js"></script>
+</body>
+</html>

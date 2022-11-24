@@ -1,53 +1,25 @@
 <!-- Ortak Headar İmport -->
 <%- include("partials/_header")%>
-<title>E-Ticaret</title>
+<title>Shop</title>
 <!--css Codes-->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/shop.css">
 <body>
 <!-- Ortak Headar İmport -->
 <%- include("partials/_menu")%>
 
-    <!--    Home Page   -->
-
-    <section id="hero">
-        <h4>Harika Kampanyalar</h4>
-        <h1>Ve Süpriz Hediyeler</h2>
-        <p>Kaçırılmayacak fırsatlar tüm ürenlerde %20'den başlayan indirim!</p>
-        <button>Alışverişe Başla</button>
-    </section>
-   
-    <section id="feature" >
-        <div class="fe-box">
-            <img src="images/features/f1.png" alt="">
-            <h6>Ücretsiz Alışveriş</h6>
-        </div>
-        <div class="fe-box">
-            <img src="images/features/f2.png" alt="">
-            <h6>Hızlı Kargo</h6>
-        </div>
-        <div class="fe-box">
-            <img src="images/features/f3.png" alt="">
-            <h6>Güvenli Alışveriş</h6>
-        </div>
-        <div class="fe-box">
-            <img src="images/features/f4.png" alt="">
-            <h6>Promosyonlar</h6>
-        </div>
-        <div class="fe-box">
-            <img src="images/features/f5.png" alt="">
-            <h6>Mutlu Müşteriler</h6>
-        </div>
-        <div class="fe-box">
-            <img src="images/features/f6.png" alt="">
-            <h6>7/24 Destek Hattı</h6>
-        </div>
+    <!--HomePage-->
+    
+    <section id="page-header">
+        <h2>#bizimMarkamızBizimTarzımız</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </section>
 
     <section id="product">
         <h2>Size Özel Ürünler</h2>
         <p>En Yeni Modellerimiz</p>
         <div class="pro-contanier">
-            <div class="pro">
+            <div class="pro" onclick="window.location.href='/product';">
                 <img src="images/products/f1.jpg" alt="">
                 <div class="description">
                     <span>Adidas</span>
@@ -175,19 +147,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
             </div>
-        </div>
-    </section>
-
-    <section id="banner">
-        <h4>Kalitenin Ve Ucuzluğun Buluştuğu Adres</h4>
-        <h2>Alışverişin Adresi <span>Dumlupınar</span> Dilediğin Ürün En Uygun Fiyata</h2>
-        <button class="normal">Daha Fazlasını Keşfet</button>
-    </section>
-
-    <section id="product">
-        <h2>En Son Çıkan Ürünler</h2>
-        <p>En Yeni Modellerimiz</p>
-        <div class="pro-contanier">
+        
             <div class="pro">
                 <img src="images/products/n1.jpg" alt="">
                 <div class="description">
@@ -318,36 +278,18 @@
             </div>
         </div>
     </section>
-
-    <section id="small-banner">
-        <div class="sm-banner-box">
-            <h4>Çılgın Fırsatlar</h4>
-            <h2>1 Alana 1 Bedava</h2>
-            <span>Lorem ipsum dolor sit.</span>
-            <button class="normal">Daha Fazlası</button>
-        </div>
-        <div class="sm-banner-box sm-banner-box2">
-            <h4>Çılgın Fırsatlar</h4>
-            <h2>1 Alana 1 Bedava</h2>
-            <span>Lorem ipsum dolor sit.</span>
-            <button class="normal">Daha Fazlası</button>
-        </div>
+    
+    <section id="page-number">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
     </section>
+ 
+    <!--HomePage End-->
 
-    <section id="banner3">
-        <div class="sm-banner-box">
-            <h2>Sezon İndirimleri</h2>
-            <h3>Kış Koleksiyonlarında %30 İNİDİRİM!</h3>
-        </div>
-        <div class="sm-banner-box sm-banner-box2">
-            <h2>Yeni Koleksiyonlar</h2>
-            <h3>Sonbahar/Kış 2023</h3>
-        </div>
-        <div class="sm-banner-box sm-banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>En Son Moda Ürünler</h3>
-        </div>
-    </section>
+
+
 
     <section id="newsletters">
         <div class="newstext">
@@ -361,7 +303,7 @@
     </section>
   <!--  Ortak Footer İmport -->
   <%-include("partials/_footer")%>
-
+  
   <script src="/js/active.js"></script>
 </body>
 </html>

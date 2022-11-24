@@ -20,18 +20,15 @@ const hostname=process.env.HOSTNAME;
 app.set('view engine','ejs');
 
 //Static Dosyalara Ulaşmak İçin
-app.use('/public', express.static('public'));
+app.use(express.static('public'));
+
+
 
 
  //Route Bölümü
 //
 app.use("/",pageRoute);
 
-app.listen(port, () => {
-   console.log(`Server Şu Portta Çalışıyor: ${port}`);
-});
-
- /*app.listen(port,hostname, () => {
-    console.log(`server çalişiyor,http://${hostname}:${port}/`)
- })*/
-  
+ app.listen(port, () => {
+    console.log(`Server Şu Portta Çalışıyor: ${port}`);
+ }); 

@@ -1,0 +1,129 @@
+/*          Shop.html &Product html                  */
+/*  page-header    */
+#page-header{
+    background-image: url(/images/banner/b1.jpg);
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+#page-header h2{
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+#page-header p{
+    color: #fff;
+    font-size: 2rem;
+}
+/*  page-header finish    */
+/*  page-number    */
+#page-number{
+    text-align: center;
+
+}
+#page-number a{
+    text-decoration: none;
+    background-color: rgb(234, 0, 255);
+    padding: 1.5rem 2rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+/*  page-number finish    */
+
+/*   Shop Page   */
+#prodetails .single-pro-img{
+    width: 40%;
+    margin: 4rem 5rem 2rem 8rem;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+/*  prodetails  */
+#prodetails{
+    display: flex;
+    margin-top: 2rem;
+
+}
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 3rem;
+
+}
+#prodetails .single-pro-details h4{
+    padding: 4rem 0 2rem 0 ;
+    font-size: 2.4rem;
+}
+#prodetails .single-pro-details h6{
+    color: #5a5a5a;
+    font-size: 1.6rem;
+}
+#prodetails .single-pro-details h2{
+    font-size: 2.6rem;   
+}
+#prodetails .single-pro-details select{
+    display:block;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+#prodetails .single-pro-details input{
+    width: 5rem;
+    height: 4.7rem;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+#prodetails .single-pro-details button {
+    background-color: rgb(234, 0, 255);
+    color: white;
+}
+#prodetails .single-pro-details button:hover {
+    background-color: rgb(153, 4, 167);
+}
+#prodetails .single-pro-details p{
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+
+@media (max-width:700px) {
+    #page-header{
+        height: 30vh;
+    }
+    #page-header h2{
+        font-size: 3rem;
+    }
+    #page-header p{
+        font-size:2rem;
+    }
+    #prodetails{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    #prodetails .single-pro-img{
+        width: 95%;
+        margin:0 auto 0 auto;
+        
+    }
+    #prodetails .single-pro-details {
+        width:100%;
+        margin-left: 2rem;
+    }
+    #prodetails .single-pro-details p{
+        margin-right: 2rem;
+    }
+}

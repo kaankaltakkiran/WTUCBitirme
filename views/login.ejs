@@ -1,0 +1,49 @@
+ <!-- Ortak Headar İmport -->
+<%- include("partials/_header")%>
+<title>Giriş Yap</title>
+<!--css Codes-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login-register.css">
+<body>
+<!-- Ortak Headar İmport -->
+<%- include("partials/_menu")%>
+
+    <!--  Home Page      -->
+    <section>
+        <div class="imgBox">
+            <img src="/images/login-register-arkaplan.jpg" alt="">
+        </div>
+        <div class="contentBox">
+            <div class="formBox">
+                <h2>Giriş Yap</h2>
+                <form>
+                    <div class="inputBox">
+                       <span>Mail Adresiniz</span><input type="email" required>
+                    </div>
+                    <div class="inputBox" id="password">
+                        <span>Şifreniz</span>
+                        <input id="show"  type="password" required>
+                        <label><input id="show-password-check" type="checkbox" onclick="myFunction()"><i class="fa-regular fa-eye-slash"></i></label>
+                         
+                     </div>
+                     <div class="rememberme"><label><input type="checkbox">Beni Hatırla</label></div>
+                     <div class="inputBox">
+                        <input type="submit" value="Giriş Yap" >
+                     </div> 
+                     <div class="inputBox">
+                        <p>Hasabın Yok'mu? <a href="/register">Hemen Kaydol</a></p>
+                     </div>    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--  Home Page Finish     -->
+      <!--  Ortak Footer İmport -->
+  <%-include("partials/_footer")%>
+  
+  <script src="/js/active.js"></script>
+  <script src="/js/passHideShow.js"></script>
+
+</body>
+</html>

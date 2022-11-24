@@ -1,0 +1,89 @@
+<!-- Ortak Headar İmport -->
+<%- include("partials/_header")%>
+<title>İletişim</title>
+<!--css Codes-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact.css">
+<body>
+<!-- Ortak Headar İmport -->
+<%- include("partials/_menu")%>
+<section id="cont-section">
+  <div class="cont-banner">
+      <h2>Bizimle İletişime Geçin</h2>
+      <p>Görüş, Sorun ve Önerilerinizi Bize İletin</p>
+  </div>
+  <div class="box">
+      <!--form box-->
+      <div class="contact form">
+          <h3>Mesajınızı Yazın</h3>
+          <form>
+              <div class="formBox">
+                  <div class="row50">
+                      <div class="inputBox">
+                          <span>Adınız</span>
+                          <input type="text" placeholder="Emre">
+                      </div>
+                      <div class="inputBox">
+                          <span>Soyadınız</span>
+                          <input type="text" placeholder="Ulupınar">
+                      </div>
+                  </div>
+
+                  <div class="row50">
+                      <div class="inputBox">
+                          <span>Mail Adresiniz</span>
+                          <input type="text" placeholder="fenerbahce@gmail.com">
+                      </div>
+                      <div class="inputBox">
+                          <span>Telefon Numaranız</span>
+                          <input type="text" placeholder="0507 1907 907">
+                      </div>
+                  </div>
+
+                  <div class="row100">
+                      <div class="inputBox">
+                          <span>Mesajınız</span>
+                          <textarea placeholder="Öneri,dilek,istek ve şikayetlernizi buraya yazınız"></textarea>
+                      </div>
+                  </div>
+                  <div class="row100">
+                      <div class="inputBox">
+                          <input type="submit" value="Gönder">
+                      </div>
+                  </div>
+
+              </div>
+          </form>
+      </div>
+      <!--info box-->
+      <div class="contact info">
+          <h3>İletişim</h3>
+          <div class="infoBox">
+              <div>
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <p> DPÜ Evliya Çelebi Yerleşkesi, Kütahya Tavşanlı Yolu 10. km, 43100 Kütahya<br> Merkez/Kütahya</p>
+              </div>
+              <div>
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <a href="mailto:fenerbahce@gmail.com">fenerbahce@gmail.com</a>
+              </div>
+              <div>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <a href="tel:05071907907">0507 1907 907</a>
+              </div>
+               <!--Socail media links-->
+          </div>
+         
+      </div>
+      <!--contact box-->
+      <div class="contact map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12318.015922654864!2d29.898643!3d39.4805331!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c9486d6b77991d%3A0xa51a8d9c8451df0e!2zRFDDnCBNw7xoZW5kaXNsaWsgRmFrw7xsdGVzaQ!5e0!3m2!1str!2str!4v1668937137397!5m2!1str!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+     
+  </div>
+</section>
+
+
+  <!--  Ortak Footer İmport -->
+  <%-include("partials/_footer")%>
+</body>
