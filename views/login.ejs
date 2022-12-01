@@ -16,13 +16,13 @@
         <div class="contentBox">
             <div class="formBox">
                 <h2>Giriş Yap</h2>
-                <form>
+                <form action="users/login" method="post">
                     <div class="inputBox">
-                       <span>Mail Adresiniz</span><input type="email" required>
+                       <span>Mail Adresiniz</span><input type="email" name="email" required>
                     </div>
                     <div class="inputBox" id="password">
                         <span>Şifreniz</span>
-                        <input id="show"  type="password" required>
+                        <input id="show"  type="password" name="password" required>
                         <label><input id="show-password-check" type="checkbox" onclick="myFunction()"><i class="fa-regular fa-eye-slash"></i></label>
                          
                      </div>
