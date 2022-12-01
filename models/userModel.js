@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-
 //Şifre İçin Kriptolama
 import bcrypt from "bcrypt";
+
 
 //Sechema Oluşturma
 //MongoDb otomatik id atıyor id vermemize gerek yok sanırım ??????????
@@ -30,14 +30,15 @@ phone:{
     required:true,
     unique:true,
 },
+birthday:{
+    //String Yerine Daha mantıklı gibi????????
+    type:String,
+    required:true,
+},
 password:{
     type:String,
     required:true,
     unique:true,
-},
-address:{
-    type:String,
-    required:true,
 },
 },
 {
@@ -47,13 +48,13 @@ address:{
 );
 //!Bu sonra da eklenir sanırım şimdilik gerek yok
 //Şifre İçin Kriptolama
-/* userSchema.pre("save",function(next){
+ userSchema.pre("save",function(next){
     const user=this;
     bcrypt.hash(user.password,10,(err,hash)=>{
         user.password=hash;
         next();
     });
-    }); */
+    }); 
 
 //Başka Yerlerde Modeli Kullanmak İçin Değişkene Atama
 const User=mongoose.model("User",userSchema);

@@ -17,18 +17,21 @@
         <div class="contentBox">
             <div class="formBox">
                 <h2>Kayıt Ol</h2>
-                <form>
+                <form action="users/register" method="post">
                     <div class="inputBox">
-                        <span>Adınız</span><input type="text" required>
+                        <span>Adınız</span><input type="text" name="name" required>
                      </div>
                      <div class="inputBox">
-                        <span>Soyadınız</span><input type="text" required>
+                        <span>Soyadınız</span><input type="text" name="lastName" required>
                      </div>
                     <div class="inputBox">
-                       <span>Mail Adresiniz</span><input type="email" required>
+                       <span>Mail Adresiniz</span><input type="email" name="email" required>
                     </div>
                     <div class="inputBox">
-                        <span>Şifreniz</span><input type="password" required>
+                        <span>Şifreniz</span><input type="password" name="password" required>
+                     </div>
+                     <div class="inputBox">
+                        <span>Telefon Numarası</span><input type="tel" name="phone" required>
                      </div>
                      <div class="inputBox">
                         <span>Doğum Tarihiniz</span><input type="date" id="birthday" name="birthday">
