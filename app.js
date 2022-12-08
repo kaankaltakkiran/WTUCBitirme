@@ -8,6 +8,10 @@ import conn from "./db.js";
 import pageRoute from "./routes/pageRoute.js";
 //UserRoute
 import UserRoute from "./routes/userRoute.js";
+//Sayfa  Json
+import cookieParser from "cookie-parser";
+//JsonWebToken İçin
+import {checkUser} from "./middlewares/authMiddleware.js";
 
 //Çevre Değişkenleri İçin(.env) Çağırma
 dotenv.config();
@@ -25,13 +29,14 @@ app.set('view engine','ejs');
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-
-
-
+app.use(cookieParser()); 
 
  //Route Bölümü
 //
+//Tüm Get Methotlarında CheckUser Kontrol Et
+app.use("*",checkUser);
 app.use("/",pageRoute);
+
 app.use("/users",UserRoute);
 
  app.listen(port, () => {

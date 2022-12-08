@@ -2,6 +2,8 @@
 import express from "express";
 //UserController İşlemler İçin
 import * as userController from "../controllers/userController.js";
+//Silindiğinde Göstermemesi Reflesh İçin
+import * as autMiddleware from "../middlewares/authMiddleware.js";
 
 //Yönledirme
 const router=express.Router();

@@ -3,6 +3,9 @@
 import express from "express";
 //PageControllerdaki İşlemler İçin
 import * as pageController from "../controllers/pageController.js";
+//Silindiğinde Göstermemesi Reflesh İçin
+import * as autMiddleware from "../middlewares/authMiddleware.js";
+
 //Yönledirme
 const router=express.Router();
 //Eğer / İseteği Gelirse PageControllerdaki GetIndexPage E git
@@ -17,7 +20,9 @@ router.route("/shop").get(pageController.getShopPage);
 router.route("/product").get(pageController.getProductPage);
 //Eğer /contact İseteği Gelirse PageControllerdaki GetIndexPage E git
 router.route("/contact").get(pageController.getContactPage);
-//Başka sayfalar için üsteki gibi yönlendirme eklenecek
+//Eğer Logout İseteği Gelirse PageControllerdaki GetLogout E git
+router.route("/logout").get(pageController.getLogout);
+
 
 //Routerı Export Ettim
 export default router;

@@ -9,7 +9,7 @@ const conn = () =>{
     mongoose
   /*   DB_URI .env dosyasından geliyor */
     .connect(process.env.DB_URI,{
-     dbName:'personel_web_site',
+     dbName:'eTicaretDataBase',
      useNewUrlParser:true,
      useUnifiedTopology:true,
     })
