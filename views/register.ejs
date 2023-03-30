@@ -4,6 +4,8 @@
  <!--css Codes-->
  <link rel="stylesheet" href="css/style.css">
  <link rel="stylesheet" href="css/login-register.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  <body>
 
 <!-- Ortak Headar İmport -->
@@ -36,7 +38,36 @@
                      <div class="inputBox">
                         <span>Doğum Tarihiniz</span><input type="date" id="birthday" name="birthday">
                      </div>
-                     <div class="agreement"><a href="#" ><label><input type="checkbox"></label>Kullanıcı Sözleşmesini Onaylıyorum</a></div>
+                      <!-- Trigger the modal with a button -->
+ <div data-toggle="modal" data-target="#myModal" class="agreement"><a href="#" ><label ><input type="checkbox" id="checkbox"></label>Kullanıcı Sözleşmesini Onaylıyorum</a></div>
+      
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Kullanıcı Sözleşmesi</h4>
+      </div>
+      <div class="modal-body">
+        <p>1. SORUMLULUKLAR
+         a.Firma, fiyatlar ve sunulan ürün ve hizmetler üzerinde değişiklik yapma hakkını her zaman saklı tutar. 
+         b.Firma, üyenin sözleşme konusu hizmetlerden, teknik arızalar dışında yararlandırılacağını kabul ve taahhüt eder.
+         c.Kullanıcı, sitenin kullanımında tersine mühendislik yapmayacağını ya da bunların kaynak kodunu bulmak veya elde etmek amacına yönelik herhangi bir başka işlemde bulunmayacağını aksi halde ve 3. Kişiler nezdinde doğacak zararlardan sorumlu olacağını, hakkında hukuki ve cezai işlem yapılacağını peşinen kabul eder. 
+         d.Kullanıcı, site içindeki faaliyetlerinde, sitenin herhangi bir bölümünde veya iletişimlerinde genel ahlaka ve adaba aykırı, kanuna aykırı, 3. Kişilerin haklarını zedeleyen, yanıltıcı, saldırgan, müstehcen, pornografik, kişilik haklarını zedeleyen, telif haklarına aykırı, yasa dışı faaliyetleri teşvik eden içerikler üretmeyeceğini, paylaşmayacağını kabul eder. Aksi halde oluşacak zarardan tamamen kendisi sorumludur ve bu durumda ‘Site’ yetkilileri, bu tür hesapları askıya alabilir, sona erdirebilir, yasal süreç başlatma hakkını saklı tutar. Bu sebeple yargı mercilerinden etkinlik veya kullanıcı hesapları ile ilgili bilgi talepleri gelirse paylaşma hakkını saklı tutar.
+         e.Sitenin üyelerinin birbirleri veya üçüncü şahıslarla olan ilişkileri kendi sorumluluğundadır. </p>
+      </div>
+      <div class="modal-footer">
+        <button onclick='checkUncheck()' type="button" class="btn btn-default" data-dismiss="modal">Onaylıyorum</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+                    
                      <div class="inputBox">
                         <input type="submit"value="Kayıt Ol" >
                      </div> 
@@ -56,5 +87,6 @@
   <%-include("partials/_footer")%>
   
   <script src="/js/active.js"></script>
+  <script src="/js/agreementClick.js"></script>
 </body>
 </html>

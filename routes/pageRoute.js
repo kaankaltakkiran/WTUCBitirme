@@ -24,5 +24,6 @@ router.route("/contact").get(pageController.getContactPage);
 router.route("/logout").get(pageController.getLogout);
 
 
+
 //Routerı Export Ettim
 export default router;

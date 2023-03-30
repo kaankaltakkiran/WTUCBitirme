@@ -46,7 +46,12 @@ const getLogout=(req,res)=>{
   });
   res.redirect("/");
 };
+
+//404 Sayfası
+const get404Page= async(req,res)=>{
+   res.render('404');
+   }
 //Yeni sayfalar olduğunda üsteki gibi oluşturacağız.
 
 //Başkta Yerde Kullanmak İçin Export
- export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getProductPage,getContactPage,getLogout};    
+ export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getProductPage,getContactPage,getLogout,get404Page};    
