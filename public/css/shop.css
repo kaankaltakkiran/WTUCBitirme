@@ -97,7 +97,39 @@
     line-height: 2.5rem;
     font-size: 1.6rem;
 }
+/*  SearchBar    */
+#searchItem{
+    padding: 6rem 8rem;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; 
+}
 
+#searchItem .form{
+    display: flex;
+    width: 90%;
+}
+#searchItem input{
+    height: 3.125rem;
+    padding: 2rem 1.25rem;
+    font-size: 2.1rem;
+    width: 100%;
+    border: 5px solid rgb(149, 146, 144);
+    border-radius: .4rem;
+    outline: none; 
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#searchItem button{
+    background-color: rgb(234, 0, 255);
+    color: #fff;
+    white-space:nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/*  SearchBar finish   */
 
 @media (max-width:700px) {
     #page-header{
