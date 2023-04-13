@@ -4,6 +4,14 @@
 <!--css Codes-->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/login-register.css">
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
+
 <body>
 <!-- Ortak Headar İmport -->
 <%- include("partials/_menu")%>
@@ -16,7 +24,7 @@
         <div class="contentBox">
             <div class="formBox">
                 <h2>Giriş Yap</h2>
-                <form action="users/login" method="post">
+                <form action="users/login" method="post" id="demo-form">
                     <div class="inputBox">
                        <span>Mail Adresiniz</span><input type="email" name="email" required>
                     </div>
@@ -28,11 +36,12 @@
                      </div>
                      <div class="rememberme"><label><input type="checkbox">Beni Hatırla</label></div>
                      <div class="inputBox">
-                        <input type="submit" value="Giriş Yap" >
+                        <button id="newButton" class="g-recaptcha" data-sitekey="6LddLoQlAAAAALh-JsMnJUlT0zcVGrb5FU7shTG1" data-callback="onSubmit"><input  type="submit" value="Giriş Yap" ></button>   
                      </div> 
                      <div class="inputBox">
-                        <p>Hasabın Yok'mu? <a href="/register">Hemen Kaydol</a></p>
-                     </div>    
+                        <p>Hesabın Yok'mu? <a href="/register">Hemen Kaydol</a></p>
+                     </div>
+                       
                 </form>
             </div>
         </div>

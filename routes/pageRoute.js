@@ -22,6 +22,7 @@ router.route("/product").get(pageController.getProductPage);
 router.route("/contact").get(pageController.getContactPage);
 //Eğer Logout İseteği Gelirse PageControllerdaki GetLogout E git
 router.route("/logout").get(pageController.getLogout);
+router.route("/payment").get(pageController.getPaymentPage);
 
 
 

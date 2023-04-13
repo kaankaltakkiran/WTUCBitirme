@@ -83,6 +83,23 @@ section .contentBox .formBox .inputBox input[type="submit"]{
     font-weight: 600;
     cursor: pointer;
 }
+#newButton{
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    border: 1px solid #607d8b;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    background: transparent;
+    color: #607d8b;
+    border-radius: 3rem;
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 section .contentBox .formBox .inputBox input[type="submit"]:hover{
     background: #d92a64;

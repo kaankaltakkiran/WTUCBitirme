@@ -51,7 +51,13 @@ const getLogout=(req,res)=>{
 const get404Page= async(req,res)=>{
    res.render('404');
    }
+   //Payment Page
+   const getPaymentPage=async (req,res)=>{
+      res.render('payment',{
+         link:'payment',
+      });
+   }
 //Yeni sayfalar olduğunda üsteki gibi oluşturacağız.
 
 //Başkta Yerde Kullanmak İçin Export
- export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getProductPage,getContactPage,getLogout,get404Page};    
+ export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getProductPage,getContactPage,getLogout,get404Page,getPaymentPage};    

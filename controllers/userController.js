@@ -23,6 +23,7 @@ res.redirect('/login');
 //Login Kısmı
 //Async Yapıyoruz Çünkü Beklemio
 const loginUser= async(req,res)=>{
+  const {email,password}=req.body;
   try{
 //Username Ve Password Karşılaştırma Yapma Yeri
 //Username Ve Password Aldım
