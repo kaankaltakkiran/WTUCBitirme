@@ -1,9 +1,21 @@
-
+import Product from "../models/productModel.js";
 //İndex Sayfası
 const getIndexPage= async(req,res)=>{
- res.render('index',{
-   link:'index',
- });
+ try {
+   //Ana sayfaya ürünleri yollama
+   const products=await Product.find({});
+   res.status(200).render('index',{
+     products,
+     link:'index',
+   });
+ 
+ } catch (error) {
+     res.status(500).json({
+         succeded:false,
+         error,
+     });
+ }
+ 
 }
 //Login Sayfası
 const getLoginPage= async(req,res)=>{
@@ -11,7 +23,6 @@ const getLoginPage= async(req,res)=>{
     link:'login',
     });
    }
-
 
 //Register Sayfası
 const getRegisterPage= async(req,res)=>{
@@ -21,16 +32,27 @@ const getRegisterPage= async(req,res)=>{
    }
 //Shop Sayfası
 const getShopPage= async(req,res)=>{
-res.render('shop',{
-   link:'shop',
-});
+   try {
+      //Ürünler ürünleri yollama
+      const products=await Product.find({});
+      res.status(200).render('shop',{
+        products,
+        link:'shop',
+      });
+    
+    } catch (error) {
+        res.status(500).json({
+            succeded:false,
+            error,
+        });
+    }
    }
 //Product Sayfası
-const getProductPage= async(req,res)=>{
+/* const getProductPage= async(req,res)=>{
 res.render('product',{
    link:'shop',
 });
-}
+} */
 //Contact Sayfası
 const getContactPage= async(req,res)=>{
    res.render('contact',{
@@ -58,6 +80,23 @@ const get404Page= async(req,res)=>{
       });
    }
 //Yeni sayfalar olduğunda üsteki gibi oluşturacağız.
-
+const getAProduct=async(req,res)=>{
+   try {
+      //Tekil Ve Çoğul ürünler Listeleme
+     const product=await Product.findById({_id:req.params.id});
+     const products=await Product.find({_id:{$ne:req.params.id}});
+     res.status(200).render('product',{
+       product,
+        link:'shop',
+        products, 
+     });
+   
+   } catch (error) {
+       res.status(500).json({
+           succeded:false,
+           error,
+       });
+   }
+   }
 //Başkta Yerde Kullanmak İçin Export
- export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getProductPage,getContactPage,getLogout,get404Page,getPaymentPage};    
+ export {getIndexPage,getLoginPage,getRegisterPage,getShopPage,getAProduct,getContactPage,getLogout,get404Page,getPaymentPage};    

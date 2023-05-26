@@ -17,14 +17,15 @@ router.route("/register").get(pageController.getRegisterPage);
 //Eğer /shop İseteği Gelirse PageControllerdaki GetIndexPage E git
 router.route("/shop").get(pageController.getShopPage);
 //Eğer /product İseteği Gelirse PageControllerdaki GetIndexPage E git
-router.route("/product").get(pageController.getProductPage);
+/*  router.route("/product").get(pageController.getProductPage);  */
 //Eğer /contact İseteği Gelirse PageControllerdaki GetIndexPage E git
 router.route("/contact").get(pageController.getContactPage);
 //Eğer Logout İseteği Gelirse PageControllerdaki GetLogout E git
 router.route("/logout").get(pageController.getLogout);
+//Kredi Kartı Tasarımı
 router.route("/payment").get(pageController.getPaymentPage);
-
-
+//Tekil ürün id ye göre
+router.route("/:id").get(pageController.getAProduct);
 
 //Routerı Export Ettim
 export default router;

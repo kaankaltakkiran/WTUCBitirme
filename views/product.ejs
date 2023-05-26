@@ -12,26 +12,26 @@
     <!--HomePage-->
     <section id="prodetails">
         <div class="single-pro-img">
-            <img src="images/products/f1.jpg" width="100%" id="MainImg" alt="">
+            <img src="<%=product.productImageUrl1%>" width="100%" id="MainImg" alt="">
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="images/products/f1.jpg" width="100%" class="small-img" alt="">
+                    <img src="<%=product.productImageUrl1%>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/products/f2.jpg" width="100%" class="small-img" alt="">
+                    <img src="<%=product.productImageUrl3%>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/products/f3.jpg" width="100%" class="small-img" alt="">
+                    <img src="<%=product.productImageUrl4%>" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="images/products/f4.jpg" width="100%" class="small-img" alt="">
+                    <img src="<%=product.productImageUrl5%>" width="100%" class="small-img" alt="">
                 </div>
             </div>
         </div>
         <div class="single-pro-details">
-            <h6>Home / T-Shirt</h6>
-            <h4>Erkek T-Shirt</h4>
-            <h2>140.00TL</h2>
+            <h6><%=product.productCategory%> / T-Shirt</h6>
+            <h4><%=product.productName%></h4>
+            <h2><%=product.productPrice%> &#x20BA;</h2>
             <select >
                 <option>Beden Seçin</option>
                 <option>XL</option>
@@ -43,10 +43,7 @@
             <input type="number" value="1">
             <button class="normal">Sepete Ekle</button>
             <h4>Ürün Detayı</h4>
-            <p><b>Ürün fotoları değişecek.. aynı ürünün farklı yerlerinin çekilmiş fotoları koyalacak....</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis neque deserunt mollitia repellendus! Alias autem aspernatur
-                 vitae veniam earum neque esse quae sapiente maiores consequuntur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem qui sapiente perspiciatis iste excepturi consectetur, expedita illo est animi 
-                 odio! Illum doloribus maxime aliquid quaerat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere tempora iure illum 
-                 illo provident quod!</p>
+            <p><%=product.productExplanation%></p>
         </div>
     </section>
 
@@ -55,72 +52,28 @@
         <h2>Size Uygun Ürünler</h2>
         <p>En Yeni Modellerimiz</p>
         <div class="pro-contanier">
-            <div class="pro">
-                <img src="images/products/n1.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu SlimFit T-shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <% for (product of products) { %>
+                <div class="pro">
+    
+                    <a href="/<%=product._id%>">
+                    <img src="<%=product.productImageUrl1%>" alt="">
+                </a>
+                    <div class="description">
+                        <span><%=product.productCategory%></span>
+                        <h5><%=product.productName%></h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4><%=product.productPrice%> &#x20BA;</h4>
                     </div>
-                    <h4>78 TL</h4>
+                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                <% } %>
             </div>
-            <div class="pro">
-                <img src="images/products/n2.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu SlimFit T-shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n3.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu SlimFit T-shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n4.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu SlimFit T-shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            
-        </div>
     </section>
     
     <!--HomePage End-->

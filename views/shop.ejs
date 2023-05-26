@@ -27,140 +27,15 @@
         </section>
 
         <div class="pro-contanier"id="product-list">
-            <div class="pro" onclick="window.location.href='/product';">
-                <img src="images/products/f1.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f2.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f3.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f4.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f5.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f6.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f7.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Pantolon</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/f8.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
         
+            <% for (product of products) { %>
             <div class="pro">
-                <img src="images/products/n1.jpg" alt="">
+                <a href="/<%=product._id%>">
+                <img src="<%=product.productImageUrl1%>" alt="">
+            </a>
                 <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
+                    <span><%=product.productCategory%></span>
+                    <h5><%=product.productName%></h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -168,123 +43,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>78 TL</h4>
+                    <h4><%=product.productPrice%> &#x20BA;</h4>
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
             </div>
-            <div class="pro">
-                <img src="images/products/n2.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n3.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n4.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n5.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n6.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Kısa Pantolon</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n7.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Uzun Kollu Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/products/n8.jpg" alt="">
-                <div class="description">
-                    <span>Adidas</span>
-                    <h5>Gömlek</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>78 TL</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-            </div>
+            <% } %>
         </div>
+     
     </section>
     
     <section id="page-number">
