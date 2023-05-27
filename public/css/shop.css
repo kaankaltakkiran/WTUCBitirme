@@ -159,3 +159,22 @@
         margin-right: 2rem;
     }
 }
+
+.table {
+    margin-bottom: 0 !important;
+  }
+  .grand-total {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  #staticBackdropLabel {
+    font-weight: bold;
+  }
+
+.shopcart{
+    letter-spacing: 5px !important;
+    padding: 0.5rem;
+    background-color: rgb(234, 0, 255);
+    color: white;
+}
