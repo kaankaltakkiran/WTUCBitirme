@@ -113,6 +113,16 @@
     font-weight: 500;
     padding: 1.4rem 1.5rem;
 }
+.sendmsg{
+    background-color: rgb(234, 0, 255);
+    color:#fff;
+    border: none;
+    font-size: 1.4rem;
+    max-width:12rem ;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 1.4rem 1.5rem;
+}
 .inputBox ::placeholder{
     color: rgb(124, 124, 124);
 }

@@ -20,6 +20,8 @@ router.route("/shop").get(pageController.getShopPage);
 /*  router.route("/product").get(pageController.getProductPage);  */
 //Eğer /contact İseteği Gelirse PageControllerdaki GetIndexPage E git
 router.route("/contact").get(pageController.getContactPage);
+//Contact form send mail
+router.route("/contact").post(pageController.sendMail);
 //Eğer Logout İseteği Gelirse PageControllerdaki GetLogout E git
 router.route("/logout").get(pageController.getLogout);
 //Kredi Kartı Tasarımı

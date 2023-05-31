@@ -16,39 +16,45 @@
       <!--form box-->
       <div class="contact form">
           <h3>Mesajınızı Yazın</h3>
-          <form>
+          <form action="/contact" method="post">
+            <div class="row50">
+                <div style="display: none;" class="alert alert-success text-center" id="sendMessage">
+
+                </div>
+            </div>
               <div class="formBox">
                   <div class="row50">
                       <div class="inputBox">
                           <span>Adınız</span>
-                          <input type="text" placeholder="Emre">
+                          <input type="text" placeholder="Lütfen Adınızı Yazınız" name="name" required>
                       </div>
                       <div class="inputBox">
                           <span>Soyadınız</span>
-                          <input type="text" placeholder="Ulupınar">
+                          <input type="text" placeholder="Lütfen Soyadınızı Yazınız" name="surname" required>
                       </div>
                   </div>
 
                   <div class="row50">
                       <div class="inputBox">
                           <span>Mail Adresiniz</span>
-                          <input type="text" placeholder="fenerbahce@gmail.com">
+                          <input type="email" placeholder="Lütfen Mail Adresinizi Yazınız" name="email" required>
                       </div>
                       <div class="inputBox">
                           <span>Telefon Numaranız</span>
-                          <input type="text" placeholder="0507 1907 907">
+                          <input type="tel" placeholder="Lütfen Telefon Numaranızı Yazınız" name="phonenumber" required>
                       </div>
                   </div>
 
                   <div class="row100">
                       <div class="inputBox">
                           <span>Mesajınız</span>
-                          <textarea placeholder="Öneri,dilek,istek ve şikayetlernizi buraya yazınız"></textarea>
+                          <textarea placeholder="Öneri,dilek,istek ve şikayetlernizi buraya yazınız" name="comment" required></textarea>
                       </div>
                   </div>
                   <div class="row100">
                       <div class="inputBox">
-                          <input type="submit" value="Gönder">
+                       <!--     <input type="submit" value="Gönder">  -->
+                          <button class="sendmsg">Gönder</button>
                       </div>
                   </div>
 
@@ -65,7 +71,9 @@
               </div>
               <div>
                   <span><i class="fa-solid fa-envelope"></i></span>
-                  <a href="mailto:fenerbahce@gmail.com">fenerbahce@gmail.com</a>
+                  <a href="mailto:wtucbitirme43@gmail.com
+                  ">wtucbitirme43@gmail.com
+                </a>
               </div>
               <div>
                   <span><i class="fa-solid fa-phone"></i></span>
@@ -95,4 +103,5 @@
   <!--  Ortak Footer İmport -->
   <%-include("partials/_footer")%>
   <script src="/js/active.js"></script>
+  <script src="/js/sendMsg.js"></script>
 </body>
