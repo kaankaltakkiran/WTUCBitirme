@@ -2,6 +2,8 @@
 import Product from "../models/productModel.js";
 //Mail için İmport
 import nodemailer from "nodemailer";
+//UserModel İmport
+import User from "../models/userModel.js";
 
 //İndex Sayfası
 const getIndexPage= async(req,res)=>{
@@ -89,10 +91,12 @@ const getAProduct=async(req,res)=>{
       //Tekil Ve Çoğul ürünler Listeleme
      const product=await Product.findById({_id:req.params.id});
      const products=await Product.find({_id:{$ne:req.params.id}});
+     const user= await User.find({});
      res.status(200).render('product',{
        product,
         link:'shop',
-        products, 
+        products,
+        user, 
      });
    
    } catch (error) {
