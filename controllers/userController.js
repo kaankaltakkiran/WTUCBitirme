@@ -44,7 +44,7 @@ if(user){
 }else{
     //Return Sebebi Kullanıcı Yoksa Şifrelerin Aynı Olup Olmaması Önemli Değil.
    
-    return res.redirect('/login');
+    return res.render('login',{emailPasswordError:'Email Veya Şifre Hatalı Girildi',link:'login'});
 } 
 //Passwordler Eşlendiyse İfe Girer
 if(same){
@@ -66,7 +66,7 @@ if(same){
         succeded:false,
         error:"Password Eşleşmedi.",
       }); */
-      res.redirect('/login');
+      res.render('login',{emailPasswordError:'Email Veya Şifre Hatalı Girildi',link:'login'});
 } 
     } catch (error) {
         res.status(500).json({

@@ -27,6 +27,7 @@ const getIndexPage= async(req,res)=>{
 const getLoginPage= async(req,res)=>{
     res.render('login',{
     link:'login',
+    emailPasswordError:'',
     });
    }
 

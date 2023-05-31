@@ -49,7 +49,7 @@ app.use("/shop",productRoute);
 //Tüm Get Methotlarında CheckUser Kontrol Et
 app.use("*",checkUser);
 app.use("/",pageRoute);
-app.use("/users",UserRoute);
+app.use("/",UserRoute);
 
 //404 Hatası render
  app.get('*', function(req, res){

@@ -2,8 +2,8 @@
 <%- include("partials/_header")%>
 <title>Giriş Yap</title>
 <!--css Codes-->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/login-register.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/login-register.css">
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
@@ -24,7 +24,12 @@
         <div class="contentBox">
             <div class="formBox">
                 <h2>Giriş Yap</h2>
-                <form action="users/login" method="post" id="demo-form">
+                <form action="/login" method="post" id="demo-form">
+                  <% if(emailPasswordError.length>0){%>
+                    <div class="alert alert-danger" style="text-align:center ;" role="alert">
+                      <%=emailPasswordError%>
+                    </div> 
+                    <% }%>
                     <div class="inputBox">
                        <span>Mail Adresiniz</span><input type="email" name="email" required>
                     </div>
